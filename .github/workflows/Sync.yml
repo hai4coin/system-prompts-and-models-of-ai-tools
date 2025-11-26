@@ -18,7 +18,7 @@ jobs:
 
       - name: Add upstream remote
         # 确保这里是您要同步的源仓库地址
-        run: git remote add upstream github.com
+        run: git remote add upstream https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools.git
 
       - name: Fetch upstream
         run: git fetch upstream
