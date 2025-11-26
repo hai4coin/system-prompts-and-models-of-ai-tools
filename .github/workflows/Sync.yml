@@ -15,11 +15,11 @@ jobs:
         with:
           fetch-depth: 0
           ref: main
-          # 使用一个具有写入权限的 PAT Token
+          # 确保这一行存在并且正确引用了您的 Secret 名称
           token: ${{ secrets.PAT_TOKEN }}
 
       - name: Add upstream remote
-        # 修正了上游仓库的完整 HTTPS URL
+        # 确保这里是您要同步的源仓库地址
         run: git remote add upstream github.com
 
       - name: Fetch upstream
@@ -30,3 +30,4 @@ jobs:
 
       - name: Push changes
         run: git push origin main
+
