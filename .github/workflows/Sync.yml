@@ -15,8 +15,11 @@ jobs:
         with:
           fetch-depth: 0
           ref: main
+          # 使用一个具有写入权限的 PAT Token
+          token: ${{ secrets.PAT_TOKEN }}
 
       - name: Add upstream remote
+        # 修正了上游仓库的完整 HTTPS URL
         run: git remote add upstream github.com
 
       - name: Fetch upstream
