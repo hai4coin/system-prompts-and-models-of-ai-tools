@@ -15,6 +15,11 @@ jobs:
         with:
           fetch-depth: 0
           ref: main
+      - name: Configure git identity
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "hai4coin@gmail.com"
+          # 您也可以使用您自己的邮箱和用户名
 
       - name: Add upstream remote
         # 确保这里是您要同步的源仓库地址
